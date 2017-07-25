@@ -1,0 +1,29 @@
+{
+  "name": "leading-select2",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zgwangweijian/leading-select2",
+  "authors": [
+    "wangwj <zgwangweijian@163.com>"
+  ],
+  "description": "leadingsoft datepicker for angularjs",
+  "main": [
+    "./dist/leading-select2.js"
+  ],
+  "keywords": [
+    "leadingsoft",
+    "select2"
+  ],
+  "ignore": [
+    ".gitignore",
+    "README.md",
+    "package.json",
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.14 <1.5.0",
+    "select2": "^4.0.3",
+    "select2-bootstrap-theme": "^0.1.0-beta.10"
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="../bower_components/select2-bootstrap-theme/dist/select2-bootstrap.min.css" rel="stylesheet">
+
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//code.angularjs.org/1.2.32/angular.min.js" type="text/javascript"></script>
+    <script src="../bower_components/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="../src/leading-select2.js" type="text/javascript"></script>
+</head>
+<body data-ng-app="SelectTest">
+<div data-ng-controller="SelectTestController" style="height: 800px;">
+    <div style="width: 1200px;margin-top:100px;text-align: center">
+        <a href="javascript:void(0)"><h4>下拉列表控件DEMO</h4></a>
+    </div>
+    <div style="width: 1200px;margin: 20px auto;">
+        <form name="form" class="form-horizontal" role="form" novalidate>
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">性别</label>
+                            <div class="col-md-8">
+                                <select name="sex" class="form-control" select2 required ng-model="condition.sex">
+                                    <option value="unknown">未知</option>
+                                    <option value="male">男</option>
+                                    <option value="female">女</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    var SelectTest = angular.module("SelectTest", ["leading.select2"]);
+    SelectTest.controller("SelectTestController", ["$scope", function ($scope) {
+        $scope.condition = {
+            sex:"unknown"
+        };
+    }]);
+</script>
+</body>
+</html>
