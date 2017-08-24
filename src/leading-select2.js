@@ -57,6 +57,10 @@
                                 opts.allowClear = false;
                             }
 
+                            if (attrs.width) {
+                                opts.width = attrs.width;
+                            }
+
                             delete opts.multiple;
                             delete opts.initSelection;
                             //TODO 验证ng-options时是否可用

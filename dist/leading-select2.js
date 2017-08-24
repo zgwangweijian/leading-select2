@@ -1,7 +1,7 @@
 /*!
  * leading-select2
  * 
- * Version: 1.0.0 - 2017-07-25T04:06:34.943Z
+ * Version: 1.0.1 - 2017-08-24T08:24:02.238Z
  * License: 
  */
 
@@ -63,6 +63,10 @@
 
                             if (!opts.placeholder && !attrs.placeholder) {
                                 opts.allowClear = false;
+                            }
+
+                            if (attrs.width) {
+                                opts.width = attrs.width;
                             }
 
                             delete opts.multiple;
